@@ -1,0 +1,49 @@
+﻿@model Contact
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<head>
+    <link rel="stylesheet" href="~/lib/boostrap/css/bootstrap.min.css" />
+
+    <script src="~lib/popper.js/umd/popper.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+
+</head>
+<h1 class=" p-3 mb-2 bg-dark text-white"> Contact Manager</h1>
+<h2>Contact Details</h2>
+<div>
+    <main class="container">
+        <div class="row">
+            <div class="col-md-4">Name:      @Model.Fname  @Model.Lname</div>
+           
+            
+            <div class="col-md-4">Phone      @Model.Phone:</div>
+            
+
+            <div class="col-md-4">Email:      @Model.Email</div>
+            
+            <div class="col-md-4">Category:   @Model.Category</div>
+           
+
+            <div>
+                Date Added: 9/27/2022 at 1:20PM
+            </div>
+        
+            <div class="col-md-4">
+                <button class="btn btn-dark" asp-controller="Contact" asp-action="Edit" asp-route-id="@Model.Id">Edit</button>
+                <button class="btn btn-dark" asp-controller="Contact" asp-action="Delete" asp-route-id="@Model.Id">Delete</button>
+                <button class="btn btn-dark" asp-controller="Contact" asp-action="Delete" asp-route-id="@Model.Id">Home</button>
+            </div>
+        </div>
+          
+    </main>
+</div>
+
+
+
+
+
+
+
